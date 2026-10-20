@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AdeStudio Kids | Printable storybooks and activity books, English &amp; French</title>
+<meta name="description" content="Printable storybooks, activity books and colouring books for children aged 4 to 10, in English and French. Instant download from Etsy.">
+<link rel="icon" type="image/png" href="favicon.png"><link rel="canonical" href="https://ademag1.github.io/adestudiokids/">
+<meta property="og:type" content="website"><meta property="og:title" content="AdeStudio Kids · Storybooks and activities to print"><meta property="og:description" content="Printable storybooks and activity books for children 4–10, in English and French."><meta property="og:image" content="https://ademag1.github.io/adestudiokids/hero-cover-en.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1D2747;--ink2:#4A5372;--mist:#F3F5F0;--paper:#FFFFFF;--sage:#5F8F72;--sage-l:#DCE8DF;--gold:#E3A33A;--rose:#D46A78;--line:#DDE3DA}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--mist);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;margin:0;line-height:1.15;letter-spacing:-.005em}
+a{color:inherit} img{max-width:100%}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* header */
+.top{position:sticky;top:0;z-index:10;background:rgba(243,245,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:18px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:42px;height:42px;border-radius:50%}
+.brand b{font:400 22px "Young Serif",serif}
+.nav{margin-left:auto;display:flex;align-items:center;gap:26px}
+.nav a{text-decoration:none;font-weight:500;font-size:15.5px;color:var(--ink2)}
+.nav a:hover{color:var(--ink)}
+.seg{display:inline-flex;border:1px solid var(--ink);border-radius:999px;padding:3px}
+.seg button{border:0;background:none;font:600 13.5px Figtree,sans-serif;color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;overflow:hidden;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:84px}
+.hero h1{font-size:clamp(38px,5.2vw,64px);max-width:13ch}
+.hero .lead{font-size:19px;color:#C9D0E4;max-width:46ch;margin:22px 0 34px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:16.5px;padding:15px 28px;border-radius:999px;background:var(--gold);color:var(--ink)}
+.btn:hover{background:#F0B654}
+.btn.ghost{background:none;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px #fff}
+.stage{position:relative;z-index:1;height:520px}
+.stage img{position:absolute;height:auto;border-radius:10px;box-shadow:0 40px 70px -30px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06)}
+.stage .page{width:56%;left:0;top:70px;transform:rotate(-6deg);opacity:.95}
+.stage .cover{width:74%;right:0;top:10px;transform:rotate(3deg)}
+.newnote{position:absolute;left:0;bottom:6px;background:var(--paper);color:var(--ink);border-radius:14px;padding:14px 18px;max-width:270px;box-shadow:0 20px 40px -20px rgba(0,0,0,.5);font-size:14.5px;line-height:1.45}
+.newnote strong{display:block;font:400 18px "Young Serif",serif;margin-bottom:2px}
+.newnote span{color:var(--rose);font-weight:700}
+.hero svg.leaf{position:absolute;width:220px;height:220px;color:#2A3760;right:-40px;bottom:-60px}
+
+/* free gift */
+.gift{padding:72px 0 0}
+.gift .wrap{display:grid;grid-template-columns:360px 1fr;gap:48px;align-items:center}
+.gift img{width:100%;border-radius:14px;display:block;box-shadow:0 24px 40px -28px rgba(29,39,71,.6)}
+.gift h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:12px}
+.gift p{color:var(--ink2);max-width:52ch;margin:0 0 24px}
+.gift .btn{background:var(--sage);color:#fff} .gift .btn:hover{background:#4F7D61}
+.free{display:inline-block;color:var(--sage);font-weight:700;margin-bottom:8px}
+
+/* catalogue */
+.shelf{padding:96px 0 20px}
+.shelf-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:40px}
+.shelf-head h2{font-size:clamp(30px,3.8vw,44px)}
+.shelf-head p{margin:8px 0 0;color:var(--ink2)}
+.tabs{display:flex;gap:6px;background:var(--paper);border-radius:999px;padding:5px;border:1px solid var(--line)}
+.tabs button{border:0;background:none;font:600 15px Figtree,sans-serif;color:var(--ink2);padding:10px 18px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff}
+.tabs small{font-weight:500;opacity:.7;margin-left:4px}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:56px 36px}
+.grid[hidden]{display:none}
+.book{display:flex;flex-direction:column}
+.cv{position:relative;display:block;border-radius:12px;overflow:hidden;background:var(--sage-l);aspect-ratio:4/3;box-shadow:0 26px 44px -30px rgba(29,39,71,.55)}
+.cv img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.book:hover .cv img{transform:scale(1.03)}
+.badge{position:absolute;left:14px;top:14px;background:var(--paper);color:var(--ink);font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px}
+.kind{margin:20px 0 6px;font-size:14px;font-weight:600;color:var(--sage)}
+.book h3{font-size:22px}
+.book h3 a{text-decoration:none} .book h3 a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.desc{margin:8px 0 14px;color:var(--ink2);font-size:15.5px;line-height:1.55}
+.buyrow{margin:auto 0 0;display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:14px}
+.price{font:400 20px "Young Serif",serif}
+.etsy{font-weight:600;font-size:15px;text-decoration:none;padding:9px 18px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.etsy:hover{background:var(--ink);color:#fff}
+.alt{display:block;margin-top:10px;font-size:14px;color:var(--ink2);text-underline-offset:3px}
+
+/* promise */
+.promise{padding:110px 0 30px}
+.promise h2{font-size:clamp(28px,3.4vw,38px);max-width:22ch;margin-bottom:40px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.three div{border-top:3px solid var(--c);padding-top:18px}
+.three h3{font-size:21px;margin-bottom:8px}
+.three p{margin:0;color:var(--ink2)}
+
+footer{margin-top:100px;background:var(--ink);color:#C9D0E4}
+footer .wrap{padding-top:44px;padding-bottom:44px;display:flex;flex-wrap:wrap;gap:22px 40px;justify-content:space-between;align-items:center;font-size:15px}
+footer .brand b{color:#fff}
+footer nav{display:flex;flex-wrap:wrap;gap:10px 24px}
+footer a{text-decoration:none} footer a:hover{color:#fff;text-decoration:underline}
+
+@media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}.hero .wrap{grid-template-columns:1fr}.stage{height:440px;max-width:560px}}
+@media(max-width:720px){
+  .nav a{display:none}
+  .hero .wrap{padding-top:48px;padding-bottom:56px}
+  .stage{height:auto}
+  .stage .page{display:none}
+  .stage .cover{position:relative;display:block;width:86%;margin:8px auto 0;right:auto;top:0;transform:rotate(2deg)}
+  .newnote{position:relative;margin:-28px auto 0;max-width:290px;bottom:auto}
+  .gift .wrap{grid-template-columns:1fr;gap:26px}
+  .three{grid-template-columns:1fr;gap:28px}
+  .shelf{padding-top:72px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr;gap:48px}.wrap{padding:0 18px}.brand b{font-size:19px}.tabs{width:100%}.tabs button{flex:1;padding:10px 8px}}
+</style></head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="#top"><img src="logo-256.png" alt="" width="42" height="42"><b>AdeStudio Kids</b></a>
+<nav class="nav" aria-label="Main"><a href="#books" data-fr="Les livres">Books</a><a href="#free" data-fr="Pages gratuites">Free pages</a><a href="#about" data-fr="Notre promesse">About</a>
+<div class="seg" role="group" aria-label="Language"><button type="button" data-l="en" aria-pressed="true">EN</button><button type="button" data-l="fr" aria-pressed="false">FR</button></div></nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<div>
+<h1 data-fr="Des histoires et des activités à imprimer">Stories and activities to print at home</h1>
+<p class="lead" data-fr="Livres d’histoires, cahiers d’activités et coloriages pour les 4 à 10 ans, en français et en anglais. Téléchargez, imprimez ou remplissez à l’écran.">Storybooks, activity books and colouring books for children aged 4 to 10, in English and French. Download, then print or fill in on screen.</p>
+<div class="cta"><a class="btn" href="#books" data-fr="Voir les livres">Browse the books</a><a class="btn ghost" href="#free" data-fr="Pages gratuites">Get free pages</a></div>
+</div>
+<div class="stage">
+<img class="page" id="hpage" src="hero-page-en.jpg" alt="" width="700" height="700">
+<img class="cover" id="hcover" src="hero-cover-en.jpg" alt="Little Things, Big Hearts storybook cover" width="900" height="900">
+<p class="newnote"><span data-fr="Nouveau">New</span> <strong id="htitle">Little Things, Big Hearts</strong><span style="color:inherit;font-weight:400" data-fr="Six histoires de gentillesse, 15 pages d’activités et un livre feuilletable.">Six kindness stories, 15 activity pages and a flipbook.</span></p>
+</div>
+</div><svg class="leaf" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 36C20 22 26 10 36 4C36 18 30 30 20 36Z" fill="currentColor"/><path d="M20 36C20 26 14 16 4 12C6 24 12 32 20 36Z" fill="currentColor" opacity=".55"/></svg></section>
+
+<section class="gift" id="free"><div class="wrap">
+<img src="free-winter-pages.jpg" alt="Four free winter activity pages with Mila the bird" loading="lazy">
+<div><span class="free" data-fr="Gratuit">Free</span>
+<h2 data-fr="Quatre pages d’hiver à essayer">Four winter pages to try</h2>
+<p data-fr="Un coloriage magique, un labyrinthe enneigé et un coloriage avec Mila, en français et en anglais. Laissez votre e-mail et téléchargez-les tout de suite.">Colour by number, a snowy maze and a colouring page with Mila the bird, in English and French. Leave your email and download them straight away.</p>
+<a class="btn" href="https://adestudioprintables.gumroad.com/l/rtgbox" target="_blank" rel="noopener" data-fr="Télécharger les pages gratuites">Download the free pages</a></div>
+</div></section>
+
+<section class="shelf" id="books"><div class="wrap">
+<div class="shelf-head"><div><h2 data-fr="Les livres">The books</h2><p data-fr="Chaque livre existe en français ou en anglais. Choisissez votre langue.">Each book comes in English or in French. Choose a language.</p></div>
+<div class="tabs" role="tablist" aria-label="Book language">
+<button role="tab" id="t-en" aria-controls="g-en" aria-selected="true" data-fr="En anglais">In English</button>
+<button role="tab" id="t-fr" aria-controls="g-fr" aria-selected="false" data-fr="En français">In French</button></div></div>
+<ul class="grid" id="g-en" role="tabpanel" aria-labelledby="t-en"><li class="book">
+<a class="cv" href="https://www.etsy.com/shop/AdeStudioKids" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="little-things-big-hearts.jpg" alt="Little Things, Big Hearts, kindness storybook for ages 4 to 8" loading="lazy" width="800" height="600"><span class="badge" data-fr="Nouveau">New</span></a>
+<p class="kind" data-fr="Histoires + activités">Storybook + activities</p>
+<h3><a href="https://www.etsy.com/shop/AdeStudioKids" target="_blank" rel="noopener">Little Things, Big Hearts</a></h3>
+<p class="desc" data-fr="Six douces histoires sur la gentillesse, 15 pages d’activités et un livre feuilletable. 70 pages, 4 à 8 ans. (version anglaise)">Six gentle stories about kindness, with 15 activity pages and a flipbook. 70 pages, ages 4 to 8.</p>
+<p class="buyrow"><span class="price">€6.90</span><a class="etsy" href="https://www.etsy.com/shop/AdeStudioKids" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596641425/winter-activity-book-kids-4-7-colour-by" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="winter-activity-book.jpg" alt="Winter in Willow Hollow, winter activity book for ages 4 to 7" loading="lazy" width="800" height="600"><span class="badge" data-fr="Nouveau">New</span></a>
+<p class="kind" data-fr="PDF remplissable + puzzle numérique">Fillable PDF + digital puzzle</p>
+<h3><a href="https://www.etsy.com/listing/4596641425/winter-activity-book-kids-4-7-colour-by" target="_blank" rel="noopener">Winter in Willow Hollow activity book</a></h3>
+<p class="desc" data-fr="26 pages d’hiver pour les 4 à 7 ans : coloriage magique, labyrinthe, mots mêlés, relier les points, coloriages et un diplôme, plus un puzzle numérique. (version anglaise)">26 winter pages for ages 4 to 7: colour by number, maze, word search, dot to dot, colouring and a certificate, plus a digital jigsaw puzzle.</p>
+<p class="buyrow"><span class="price">€6.90</span><a class="etsy" href="https://www.etsy.com/listing/4596641425/winter-activity-book-kids-4-7-colour-by" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p><a class="alt" href="https://adestudioprintables.gumroad.com/l/nopyoc" target="_blank" rel="noopener" data-fr="Lot FR + EN sur Gumroad, €9.90">English + French bundle on Gumroad, €9.90</a>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596661505/kids-printable-storybook-ages-4-7" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="milas-big-delivery.jpg" alt="Mila’s Big Delivery, printable storybook for ages 4 to 7" loading="lazy" width="800" height="600"><span class="badge" data-fr="Livre 1">Book 1</span></a>
+<p class="kind" data-fr="Livre d’histoire PDF remplissable">Fillable PDF storybook</p>
+<h3><a href="https://www.etsy.com/listing/4596661505/kids-printable-storybook-ages-4-7" target="_blank" rel="noopener">Mila’s Big Delivery storybook</a></h3>
+<p class="desc" data-fr="Aide Mila, l’oiseau facteur, à livrer ses lettres. Un livre d’histoire à compléter avec coloriages, dessins et écriture. 32 pages, 4 à 7 ans. (version anglaise)">Help Mila the post bird deliver her letters around Willow Hollow. A fillable storybook with colouring, drawing and writing pages. 32 pages, ages 4 to 7.</p>
+<p class="buyrow"><span class="price">€7.90</span><a class="etsy" href="https://www.etsy.com/listing/4596661505/kids-printable-storybook-ages-4-7" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596357738/kids-colouring-book-bundle-5-printable" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="colouring-books-bundle-5.jpg" alt="Kids colouring book bundle: animals, vehicles, ocean, safari and mandalas" loading="lazy" width="800" height="600"><span class="badge" data-fr="Meilleur prix">Best value</span></a>
+<p class="kind" data-fr="Lot de PDF à imprimer">Bundle</p>
+<h3><a href="https://www.etsy.com/listing/4596357738/kids-colouring-book-bundle-5-printable" target="_blank" rel="noopener">5 colouring books bundle</a></h3>
+<p class="desc" data-fr="Cinq livres de coloriage en un : animaux, bébés animaux, véhicules, océan et jungle, safari et mandalas. 89 pages, 4 à 10 ans. (version anglaise)">Five colouring books in one: animal kingdom, baby animals, vehicles, ocean and jungle, and safari mandalas. 89 pages, ages 4 to 10.</p>
+<p class="buyrow"><span class="price">€12.99</span><a class="etsy" href="https://www.etsy.com/listing/4596357738/kids-colouring-book-bundle-5-printable" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596537499/colour-by-number-for-kids-4-7-printable" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="colour-by-number-baby-animals.jpg" alt="Colour by number, baby animals and pets, ages 4 to 7" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4596537499/colour-by-number-for-kids-4-7-printable" target="_blank" rel="noopener">Colour by number, baby animals</a></h3>
+<p class="desc" data-fr="Coloriages magiques avec chiots, chatons et autres bébés animaux. 16 pages avec corrigé, 4 à 7 ans. (version anglaise)">Colour-by-number pages with puppies, kittens and other baby animals. 16 pages with an answer key, ages 4 to 7.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4596537499/colour-by-number-for-kids-4-7-printable" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596374627/abc-tracing-book-for-kids-ages-5-to-7" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="abc-tracing-book.jpg" alt="ABC tracing book, letters, words and numbers, ages 5 to 7" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4596374627/abc-tracing-book-for-kids-ages-5-to-7" target="_blank" rel="noopener">ABC tracing book</a></h3>
+<p class="desc" data-fr="Repasse les lettres, les mots et les chiffres avec de jolis animaux. 32 pages, 5 à 7 ans. (version anglaise)">Trace letters, words and numbers with cute animals, from airplane to zebra. 32 pages, ages 5 to 7.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4596374627/abc-tracing-book-for-kids-ages-5-to-7" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596378342/safari-and-mandala-colouring-book-for" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="safari-mandala-colouring-book.jpg" alt="Wild safari and mandala colouring book, ages 9 to 10" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4596378342/safari-and-mandala-colouring-book-for" target="_blank" rel="noopener">Wild safari and mandala colouring book</a></h3>
+<p class="desc" data-fr="Coloriages détaillés d’animaux du safari et de mandalas pour les plus grands. 17 pages, 9 à 10 ans. (version anglaise)">Detailed colouring pages with safari animals and mandala patterns for older kids. 17 pages, ages 9 to 10.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4596378342/safari-and-mandala-colouring-book-for" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596354965/ocean-and-jungle-colouring-book-for-kids" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="ocean-jungle-colouring-book.jpg" alt="Ocean and jungle colouring book, ages 7 to 8" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4596354965/ocean-and-jungle-colouring-book-for-kids" target="_blank" rel="noopener">Ocean and jungle colouring book</a></h3>
+<p class="desc" data-fr="Animaux marins et de la jungle à colorier : baleines, tortues, singes et tigres. 17 pages, 7 à 8 ans. (version anglaise)">Sea creatures and jungle animals to colour: whales, turtles, monkeys and tigers. 17 pages, ages 7 to 8.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4596354965/ocean-and-jungle-colouring-book-for-kids" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596367136/baby-animals-colouring-book-for-kids-5-6" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="baby-animals-colouring-book.jpg" alt="Baby animals and pets colouring book, ages 5 to 6" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4596367136/baby-animals-colouring-book-for-kids-5-6" target="_blank" rel="noopener">Baby animals and pets colouring book</a></h3>
+<p class="desc" data-fr="Bébés animaux et compagnons à colorier : chiots, chatons, lapins, canetons et pandas. 17 pages, 5 à 6 ans. (version anglaise)">Cute baby animals and pets to colour: puppies, kittens, bunnies, ducklings and pandas. 17 pages, ages 5 to 6.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4596367136/baby-animals-colouring-book-for-kids-5-6" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596361742/animal-colouring-book-for-kids-4-6" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="animal-kingdom-colouring-book.jpg" alt="Animal kingdom colouring book, ages 4 to 6" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4596361742/animal-colouring-book-for-kids-4-6" target="_blank" rel="noopener">Animal kingdom colouring book</a></h3>
+<p class="desc" data-fr="Animaux de la ferme et de la forêt à colorier : vaches, cochons, renards, hiboux et plus. 17 pages, 4 à 6 ans. (version anglaise)">Farm and woodland animals to colour: cows, pigs, foxes, owls and more. 17 pages, ages 4 to 6.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4596361742/animal-colouring-book-for-kids-4-6" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596324993/dinosaur-colouring-book-for-kids-4-8" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="dinosaur-colouring-book.jpg" alt="Dinosaur adventure colouring book, ages 4 to 8" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4596324993/dinosaur-colouring-book-for-kids-4-8" target="_blank" rel="noopener">Dinosaur adventure colouring book</a></h3>
+<p class="desc" data-fr="Dinosaures à colorier : T-Rex, tricératops, bébés dinos et volcans. 17 pages, 4 à 8 ans. (version anglaise)">Dinosaurs to colour: T-Rex, triceratops, baby dinos and volcanoes. 17 pages, ages 4 to 8.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4596324993/dinosaur-colouring-book-for-kids-4-8" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596338802/vehicles-colouring-book-for-kids-4-8" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="vehicles-colouring-book.jpg" alt="Cars, trucks, trains and planes colouring book, ages 4 to 8" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4596338802/vehicles-colouring-book-for-kids-4-8" target="_blank" rel="noopener">Cars, trucks, trains and planes colouring book</a></h3>
+<p class="desc" data-fr="Véhicules à colorier : voitures, camions de pompiers, bus scolaires, trains et avions. 21 pages, 4 à 8 ans. (version anglaise)">Vehicles to colour: cars, fire trucks, school buses, trains and planes. 21 pages, ages 4 to 8.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4596338802/vehicles-colouring-book-for-kids-4-8" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4589298495/kids-activity-bundle-ages-4-7-45" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="kids-activity-bundle-ages-4-to-7.jpg" alt="Kids activity bundle, ages 4 to 7 cover" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4589298495/kids-activity-bundle-ages-4-7-45" target="_blank" rel="noopener">Kids activity bundle, ages 4 to 7</a></h3>
+<p class="desc" data-fr="45 fiches : écriture, labyrinthes, relier les points, coloriage et premiers calculs. (version anglaise)">45 worksheets: tracing, mazes, dot to dot, coloring and early math.</p>
+<p class="buyrow"><span class="price">€7.99</span><a class="etsy" href="https://www.etsy.com/listing/4589298495/kids-activity-bundle-ages-4-7-45" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4588521277/kids-learning-mega-bundle-103-printable" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="kids-learning-mega-bundle-ages-4-to-11.jpg" alt="Kids learning mega bundle, ages 4 to 11 cover" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4588521277/kids-learning-mega-bundle-103-printable" target="_blank" rel="noopener">Kids learning mega bundle, ages 4 to 11</a></h3>
+<p class="desc" data-fr="103 fiches : maths, alphabet, tables de multiplication, labyrinthes et sudoku. (version anglaise)">103 worksheets covering math, alphabet tracing, times tables, mazes and sudoku.</p>
+<p class="buyrow"><span class="price">€11.99</span><a class="etsy" href="https://www.etsy.com/listing/4588521277/kids-learning-mega-bundle-103-printable" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li></ul>
+<ul class="grid" id="g-fr" role="tabpanel" aria-labelledby="t-fr" hidden><li class="book">
+<a class="cv" href="https://www.etsy.com/shop/AdeStudioKids" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="petits-gestes-grands-coeurs.jpg" alt="Petits gestes, grands cœurs, livre sur la gentillesse, 4 à 8 ans" loading="lazy" width="800" height="600"><span class="badge" data-fr="Nouveau">New</span></a>
+<p class="kind" data-fr="Histoires + activités">Storybook + activities</p>
+<h3><a href="https://www.etsy.com/shop/AdeStudioKids" target="_blank" rel="noopener">Petits gestes, grands cœurs</a></h3>
+<p class="desc" data-fr="Six douces histoires sur la gentillesse, 15 pages d’activités et un livre feuilletable. 70 pages, 4 à 8 ans.">The French edition: six kindness stories, 15 activity pages and a flipbook. 70 pages, ages 4 to 8.</p>
+<p class="buyrow"><span class="price">€6.90</span><a class="etsy" href="https://www.etsy.com/shop/AdeStudioKids" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596666268/cahier-dactivites-hiver-enfant-4-7-ans-a" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="cahier-activites-hiver.jpg" alt="L’hiver au Val-des-Saules, cahier d’activités d’hiver, 4 à 7 ans" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF remplissable + puzzle numérique">Fillable PDF + digital puzzle</p>
+<h3><a href="https://www.etsy.com/listing/4596666268/cahier-dactivites-hiver-enfant-4-7-ans-a" target="_blank" rel="noopener">L’hiver au Val-des-Saules</a></h3>
+<p class="desc" data-fr="Cahier d’activités d’hiver : coloriage magique, labyrinthe, mots mêlés, coloriages et un diplôme, plus un puzzle numérique. 26 pages, 4 à 7 ans.">The French edition of the winter activity book: coloriage magique, maze, word search, colouring and a certificate, plus a digital jigsaw puzzle. 26 pages, ages 4 to 7.</p>
+<p class="buyrow"><span class="price">€6.90</span><a class="etsy" href="https://www.etsy.com/listing/4596666268/cahier-dactivites-hiver-enfant-4-7-ans-a" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p><a class="alt" href="https://adestudioprintables.gumroad.com/l/nopyoc" target="_blank" rel="noopener" data-fr="Lot FR + EN sur Gumroad, €9.90">English + French bundle on Gumroad, €9.90</a>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4597054939/lot-5-livres-de-coloriage-enfant-4-10" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="lot-5-livres-de-coloriage.jpg" alt="Lot de 5 livres de coloriage: animaux, véhicules, océan, safari et mandalas" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4597054939/lot-5-livres-de-coloriage-enfant-4-10" target="_blank" rel="noopener">Lot de 5 livres de coloriage</a></h3>
+<p class="desc" data-fr="Cinq livres de coloriage en un lot : animaux, véhicules, océan, safari et mandalas. 89 pages, 4 à 10 ans.">Five French colouring books in one bundle: animals, vehicles, ocean, safari and mandalas. 89 pages for ages 4 to 10.</p>
+<p class="buyrow"><span class="price">€12.99</span><a class="etsy" href="https://www.etsy.com/listing/4597054939/lot-5-livres-de-coloriage-enfant-4-10" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4597050897/coloriage-magique-enfant-4-7-ans-bebes" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="coloriage-magique-bebes-animaux.jpg" alt="Coloriage magique bébés animaux et compagnons, 4 à 7 ans" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4597050897/coloriage-magique-enfant-4-7-ans-bebes" target="_blank" rel="noopener">Coloriage magique, bébés animaux</a></h3>
+<p class="desc" data-fr="Coloriages magiques avec bébés animaux et compagnons. 16 pages avec corrigé, 4 à 7 ans.">French colour-by-number pages with baby animals and pets. 16 pages with answer key, ages 4 to 7.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4597050897/coloriage-magique-enfant-4-7-ans-bebes" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4597068670/cahier-decriture-abc-enfant-5-7-ans" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="cahier-ecriture-abc.jpg" alt="Cahier d’écriture ABC, lettres, mots et chiffres, 5 à 7 ans" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4597068670/cahier-decriture-abc-enfant-5-7-ans" target="_blank" rel="noopener">Cahier d’écriture ABC</a></h3>
+<p class="desc" data-fr="Cahier d’écriture : repasse les lettres, les mots et les chiffres avec de jolis animaux. 32 pages, 5 à 7 ans.">French handwriting practice: trace letters, words and numbers with cute animals. 32 pages, ages 5 to 7.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4597068670/cahier-decriture-abc-enfant-5-7-ans" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4597064730/livre-de-coloriage-dinosaures-enfant-4-8" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="livre-coloriage-dinosaures.jpg" alt="Le monde des dinosaures, livre de coloriage 4 à 8 ans" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4597064730/livre-de-coloriage-dinosaures-enfant-4-8" target="_blank" rel="noopener">Le monde des dinosaures</a></h3>
+<p class="desc" data-fr="Livre de coloriage dinosaures : T-Rex, tricératops, bébés dinos et volcans. 17 pages, 4 à 8 ans.">French dinosaur colouring book: T-Rex, triceratops, baby dinos and volcanoes. 17 pages, ages 4 to 8.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4597064730/livre-de-coloriage-dinosaures-enfant-4-8" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4597042539/livre-de-coloriage-safari-et-mandalas" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="livre-coloriage-safari-mandalas.jpg" alt="Safari sauvage et mandalas, livre de coloriage 9 à 10 ans" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4597042539/livre-de-coloriage-safari-et-mandalas" target="_blank" rel="noopener">Safari sauvage et mandalas</a></h3>
+<p class="desc" data-fr="Coloriages détaillés d’animaux du safari et de mandalas pour les plus grands. 17 pages, 9 à 10 ans.">Detailed French colouring book with safari animals and mandala patterns for older kids. 17 pages, ages 9 to 10.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4597042539/livre-de-coloriage-safari-et-mandalas" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4597038385/livre-de-coloriage-ocean-et-jungle" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="livre-coloriage-ocean-jungle.jpg" alt="Océan et jungle, livre de coloriage 7 à 8 ans" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4597038385/livre-de-coloriage-ocean-et-jungle" target="_blank" rel="noopener">Océan et jungle</a></h3>
+<p class="desc" data-fr="Animaux marins et de la jungle à colorier : baleines, tortues, singes et tigres. 17 pages, 7 à 8 ans.">French colouring book with sea creatures and jungle animals: whales, turtles, monkeys and tigers. 17 pages, ages 7 to 8.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4597038385/livre-de-coloriage-ocean-et-jungle" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4597056328/livre-de-coloriage-bebes-animaux-enfant" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="livre-coloriage-bebes-animaux.jpg" alt="Bébés animaux et compagnons, livre de coloriage 5 à 6 ans" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4597056328/livre-de-coloriage-bebes-animaux-enfant" target="_blank" rel="noopener">Bébés animaux et compagnons</a></h3>
+<p class="desc" data-fr="Bébés animaux et compagnons à colorier : chiots, chatons, lapins, canetons et pandas. 17 pages, 5 à 6 ans.">French colouring book with cute baby animals and pets: puppies, kittens, bunnies, ducklings and pandas. 17 pages, ages 5 to 6.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4597056328/livre-de-coloriage-bebes-animaux-enfant" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4597053458/livre-de-coloriage-animaux-enfant-4-6" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="livre-coloriage-royaume-animaux.jpg" alt="Le royaume des animaux, livre de coloriage 4 à 6 ans" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4597053458/livre-de-coloriage-animaux-enfant-4-6" target="_blank" rel="noopener">Le royaume des animaux</a></h3>
+<p class="desc" data-fr="Animaux de la ferme et de la forêt à colorier : vaches, cochons, renards, hiboux et plus. 17 pages, 4 à 6 ans.">French colouring book with farm and woodland animals: cows, pigs, foxes, owls and more. 17 pages, ages 4 to 6.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4597053458/livre-de-coloriage-animaux-enfant-4-6" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4597043548/livre-de-coloriage-vehicules-enfant-4-8" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="livre-coloriage-vehicules.jpg" alt="Voitures et camions, trains et avions, livre de coloriage 4 à 8 ans" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="PDF à imprimer">Printable PDF</p>
+<h3><a href="https://www.etsy.com/listing/4597043548/livre-de-coloriage-vehicules-enfant-4-8" target="_blank" rel="noopener">Voitures, camions, trains et avions</a></h3>
+<p class="desc" data-fr="Véhicules à colorier : voitures, camions de pompiers, bus scolaires, trains et avions. 21 pages, 4 à 8 ans.">French vehicles colouring book: cars, fire trucks, school buses, trains and planes. 21 pages, ages 4 to 8.</p>
+<p class="buyrow"><span class="price">€4.99</span><a class="etsy" href="https://www.etsy.com/listing/4597043548/livre-de-coloriage-vehicules-enfant-4-8" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li><li class="book">
+<a class="cv" href="https://www.etsy.com/listing/4596663733/livre-dhistoire-enfant-4-7-ans-a" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="la-grande-tournee-de-mila.jpg" alt="La grande tournée de Mila, livre d’histoire à imprimer, 4 à 7 ans" loading="lazy" width="800" height="600"></a>
+<p class="kind" data-fr="Livre d’histoire PDF remplissable">Fillable PDF storybook</p>
+<h3><a href="https://www.etsy.com/listing/4596663733/livre-dhistoire-enfant-4-7-ans-a" target="_blank" rel="noopener">La grande tournée de Mila</a></h3>
+<p class="desc" data-fr="Un livre d’histoire à compléter : aide Mila, l’oiseau facteur, à livrer ses lettres. Coloriages, dessins et écriture. 32 pages, 4 à 7 ans.">A French storybook to fill in: help Mila the post bird deliver her letters. Colouring, drawing and writing pages. 32 pages, ages 4 to 7.</p>
+<p class="buyrow"><span class="price">€7.90</span><a class="etsy" href="https://www.etsy.com/listing/4596663733/livre-dhistoire-enfant-4-7-ans-a" target="_blank" rel="noopener" data-fr="Voir sur Etsy">See on Etsy</a></p>
+</li></ul>
+</div></section>
+
+<section class="promise" id="about"><div class="wrap">
+<h2 data-fr="Des livres faits avec soin, pour lire et créer ensemble">Books made with care, for reading and making things together</h2>
+<div class="three">
+<div style="--c:var(--gold)"><h3 data-fr="Nos propres personnages">Our own characters</h3><p data-fr="Mila, Leo, Pepper et leurs amis sont dessinés pour nos livres. Vous ne les trouverez nulle part ailleurs.">Mila, Leo, Pepper and their friends are made for our books. You won’t find them anywhere else.</p></div>
+<div style="--c:var(--sage)"><h3 data-fr="Deux langues">Two languages</h3><p data-fr="La plupart des livres existent en français et en anglais, pour les familles bilingues et les petits qui apprennent.">Most books come in English and in French, for bilingual families and young language learners.</p></div>
+<div style="--c:var(--rose)"><h3 data-fr="À remplir ou à imprimer">Fill in or print</h3><p data-fr="Des PDF à remplir sur tablette ou ordinateur, ou à imprimer en A4 et US Letter.">Fillable PDFs to type in on a tablet or computer, or print in A4 and US Letter.</p></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+<a class="brand" href="#top"><img src="logo-256.png" alt="" width="36" height="36"><b>AdeStudio Kids</b></a>
+<nav aria-label="Footer"><a href="https://www.etsy.com/shop/AdeStudioKids" target="_blank" rel="noopener" data-fr="Boutique Etsy">Etsy shop</a><a href="https://adestudioprintables.gumroad.com" target="_blank" rel="noopener">Gumroad</a><a href="https://adestudioprintables.com" target="_blank" rel="noopener" data-fr="Planners pour les adultes">Planners for grown-ups</a><a href="https://adestudioprintables.com/legal.html" data-fr="Mentions légales">Legal notice</a><a href="https://adestudioprintables.com/privacy.html" data-fr="Confidentialité">Privacy</a></nav>
+<span data-fr="&copy; 2026 AdeStudio Kids, une marque d’AdeStudioPrintables">&copy; 2026 AdeStudio Kids, a brand of AdeStudioPrintables</span>
+</div></footer>
+<script>
+(function(){
+var els=[].slice.call(document.querySelectorAll('[data-fr]'));els.forEach(function(e){e.setAttribute('data-en',e.innerHTML)});
+function tab(l){['en','fr'].forEach(function(k){document.getElementById('t-'+k).setAttribute('aria-selected',k===l);document.getElementById('g-'+k).hidden=k!==l})}
+function set(l){document.documentElement.lang=l;els.forEach(function(e){e.innerHTML=e.getAttribute(l==='fr'?'data-fr':'data-en')});
+[].forEach.call(document.querySelectorAll('.seg button'),function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});
+document.getElementById('hcover').src='hero-cover-'+l+'.jpg';document.getElementById('hpage').src='hero-page-'+l+'.jpg';
+document.getElementById('hcover').alt=l==='fr'?'Couverture du livre Petits gestes, grands cœurs':'Little Things, Big Hearts storybook cover';
+document.getElementById('htitle').textContent=l==='fr'?'Petits gestes, grands cœurs':'Little Things, Big Hearts';
+document.title=l==='fr'?'AdeStudio Kids | Livres d’histoires et cahiers d’activités à imprimer, français et anglais':'AdeStudio Kids | Printable storybooks and activity books, English & French';
+tab(l);try{localStorage.setItem('lang',l)}catch(x){}}
+[].forEach.call(document.querySelectorAll('.seg button'),function(b){b.addEventListener('click',function(){set(b.dataset.l)})});
+document.getElementById('t-en').addEventListener('click',function(){tab('en')});document.getElementById('t-fr').addEventListener('click',function(){tab('fr')});
+var l='en';try{l=localStorage.getItem('lang')||((navigator.language||'').toLowerCase().indexOf('fr')===0?'fr':'en')}catch(x){}
+var p=new URLSearchParams(location.search).get('lang');if(p==='fr'||p==='en')l=p;set(l);
+})();
+</script></body></html>
