@@ -46,31 +46,35 @@ main{max-width:1000px;margin:0 auto;padding:28px 18px 60px}
 <div class="err" id="err" role="alert"></div></form>
 <section id="lib" hidden>
 <ul class="grid" id="grid"></ul>
-<div class="tip" data-en="&lt;strong&gt;Tip:&lt;/strong&gt; add this page to your home screen to open it like an app. iPhone/iPad: Share → Add to Home Screen. Android: menu ⋮ → Add to Home screen." data-fr="&lt;strong&gt;Astuce :&lt;/strong&gt; ajoutez cette page à l’écran d’accueil pour l’ouvrir comme une appli. iPhone/iPad : Partager → Sur l’écran d’accueil. Android : menu ⋮ → Ajouter à l’écran d’accueil."><strong>Tip:</strong> add this page to your home screen to open it like an app. iPhone/iPad: Share → Add to Home Screen. Android: menu ⋮ → Add to Home screen.</div>
+<p style="text-align:center;margin:30px 0 0"><button type="button" id="more" style="border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;font:600 15px Figtree,sans-serif;cursor:pointer" data-en="I have another code" data-fr="J’ai un autre code">I have another code</button></p><div class="tip" data-en="&lt;strong&gt;Tip:&lt;/strong&gt; add this page to your home screen to open it like an app. iPhone/iPad: Share → Add to Home Screen. Android: menu ⋮ → Add to Home screen." data-fr="&lt;strong&gt;Astuce :&lt;/strong&gt; ajoutez cette page à l’écran d’accueil pour l’ouvrir comme une appli. iPhone/iPad : Partager → Sur l’écran d’accueil. Android : menu ⋮ → Ajouter à l’écran d’accueil."><strong>Tip:</strong> add this page to your home screen to open it like an app. iPhone/iPad: Share → Add to Home Screen. Android: menu ⋮ → Add to Home screen.</div>
 </section></main>
 <script>
 (function(){
-var B=[{"slug": "animal-kingdom", "lang": "en", "title": "Animal Kingdom", "age": "4–6"}, {"slug": "baby-animals", "lang": "en", "title": "Baby Animals & Pets", "age": "5–6"}, {"slug": "vehicles", "lang": "en", "title": "Cars, Trucks, Trains & Planes", "age": "4–8"}, {"slug": "ocean-jungle", "lang": "en", "title": "Ocean & Jungle", "age": "7–8"}, {"slug": "wild-safari", "lang": "en", "title": "Wild Safari & Mandalas", "age": "9–10"}, {"slug": "royaume-animaux", "lang": "fr", "title": "Le Royaume des Animaux", "age": "4–6"}, {"slug": "bebes-animaux", "lang": "fr", "title": "Bébés Animaux & Compagnons", "age": "5–6"}, {"slug": "vehicules", "lang": "fr", "title": "Voitures, Camions, Trains & Avions", "age": "4–8"}, {"slug": "ocean-jungle-fr", "lang": "fr", "title": "Océan & Jungle", "age": "7–8"}, {"slug": "safari-mandalas", "lang": "fr", "title": "Safari Sauvage & Mandalas", "age": "9–10"}], H='f9ccabb430f30fb6faa3d6069b99e68258871f4707f3e75d10fca413662620e5', K='f9ccabb430f30fb6', lang='en';
-function ok(){try{return localStorage.getItem('ask-colour')===K}catch(e){return false}}
+var B=[{"slug": "animal-kingdom", "lang": "en", "title": "Animal Kingdom", "age": "4–6"}, {"slug": "baby-animals", "lang": "en", "title": "Baby Animals & Pets", "age": "5–6"}, {"slug": "vehicles", "lang": "en", "title": "Cars, Trucks, Trains & Planes", "age": "4–8"}, {"slug": "ocean-jungle", "lang": "en", "title": "Ocean & Jungle", "age": "7–8"}, {"slug": "wild-safari", "lang": "en", "title": "Wild Safari & Mandalas", "age": "9–10"}, {"slug": "royaume-animaux", "lang": "fr", "title": "Le Royaume des Animaux", "age": "4–6"}, {"slug": "bebes-animaux", "lang": "fr", "title": "Bébés Animaux & Compagnons", "age": "5–6"}, {"slug": "vehicules", "lang": "fr", "title": "Voitures, Camions, Trains & Avions", "age": "4–8"}, {"slug": "ocean-jungle-fr", "lang": "fr", "title": "Océan & Jungle", "age": "7–8"}, {"slug": "safari-mandalas", "lang": "fr", "title": "Safari Sauvage & Mandalas", "age": "9–10"}, {"slug": "dinosaures", "lang": "fr", "title": "Le Monde des Dinosaures", "age": "4–8"}], HS={"f9ccabb430f30fb6faa3d6069b99e68258871f4707f3e75d10fca413662620e5": ["animal-kingdom", "baby-animals", "vehicles", "ocean-jungle", "wild-safari", "royaume-animaux", "bebes-animaux", "vehicules", "ocean-jungle-fr", "safari-mandalas"], "50b92450680baad7d9d5feaba206f37ef8e07527e5d290335b46d5d95b93ce94": ["animal-kingdom"], "984f76717c3360c5b6498745d1fd9ddb2ce58b73874a2cad277904f28709a2dd": ["baby-animals"], "216a968be0db5d577076a4348309abc048e47008e7dfc5adac82521517650b4b": ["vehicles"], "33b200c098f72b8f9b8ddba7378412a8ab77a31137facac35fce646e1ab41eea": ["ocean-jungle"], "cce8dcc09c451cdd33acbdb60514e33262f6d1bf6e0622e5a045c2bf9dd6a815": ["wild-safari"], "03b6998fab35aea62b4615722bb371e5b01037cddbbe4de63ba48486d9876554": ["royaume-animaux"], "70e1a4e551893931e2d89fffb134cc8c2556087e48cbbe1bc8aaec74e000ae7f": ["bebes-animaux"], "96b57a3f43abd6d70aa7bcb2ab214bcd4d02d6853935aa0b59dd8bf212c67800": ["vehicules"], "3015fd6d1d08211fc84f6f3877bddd45ed87ffc7a1e073764c296b1a08ce5023": ["ocean-jungle-fr"], "3ff0ccf50c73f6c94ec385040e0659084dd360b9a8a2bff3527d59ff681aa758": ["safari-mandalas"], "facf4c44b7b6d2c2e687916dd5abcfb021942142dfe7e7851043325daf5154b1": ["dinosaures"]}, lang='en';
+function allowed(){var a=[];try{if(localStorage.getItem('ask-colour')==='f9ccabb430f30fb6')a=HS['f9ccabb430f30fb6faa3d6069b99e68258871f4707f3e75d10fca413662620e5'].slice();var x=JSON.parse(localStorage.getItem('ask-colour-books')||'[]');x.forEach(function(s){if(a.indexOf(s)<0)a.push(s)})}catch(e){}return a}
 function render(){
   document.documentElement.lang=lang;
   [].forEach.call(document.querySelectorAll('[data-en]'),function(e){e.innerHTML=e.getAttribute('data-'+lang)});
   [].forEach.call(document.querySelectorAll('.seg button'),function(b){b.setAttribute('aria-pressed',b.dataset.l===lang)});
-  var g=document.getElementById('grid'); g.innerHTML='';
-  B.filter(function(b){return b.lang===lang}).forEach(function(b){
+  var al=allowed(), g=document.getElementById('grid'); g.innerHTML='';
+  var mine=B.filter(function(b){return al.indexOf(b.slug)>=0});
+  var shown=mine.filter(function(b){return b.lang===lang}); if(!shown.length)shown=mine;
+  shown.forEach(function(b){
     var li=document.createElement('li');
-    li.innerHTML='<a href="books/'+b.slug+'.html"><img src="covers/'+b.slug+'.jpg" alt="" loading="lazy"><b>'+b.title+'</b><span>'+(lang==='fr'?b.age+' ans':'Ages '+b.age)+'</span></a>';
+    li.innerHTML='<a href="books/'+b.slug+'.html"><img src="covers/'+b.slug+'.jpg" alt="" loading="lazy"><b>'+b.title+'</b><span>'+(b.lang==='fr'?b.age+' ans':'Ages '+b.age)+'</span></a>';
     g.appendChild(li)});
-  document.getElementById('gate').hidden=ok(); document.getElementById('lib').hidden=!ok();
+  document.getElementById('gate').hidden=mine.length>0; document.getElementById('lib').hidden=!mine.length;
 }
 function hex(buf){return Array.prototype.map.call(new Uint8Array(buf),function(x){return ('0'+x.toString(16)).slice(-2)}).join('')}
 document.getElementById('gate').addEventListener('submit',function(e){
   e.preventDefault(); var v=document.getElementById('code').value.trim().toUpperCase().replace(/\s+/g,'');
   crypto.subtle.digest('SHA-256',new TextEncoder().encode(v)).then(function(d){
-    if(hex(d)===H){try{localStorage.setItem('ask-colour',K)}catch(x){}
-      var n=new URLSearchParams(location.search).get('next'); if(n&&/^[a-z-]+\.html$/.test(n)){location.href='books/'+n;return} render()}
+    var h=hex(d);
+    if(HS[h]){try{var x=JSON.parse(localStorage.getItem('ask-colour-books')||'[]');HS[h].forEach(function(s){if(x.indexOf(s)<0)x.push(s)});localStorage.setItem('ask-colour-books',JSON.stringify(x))}catch(z){}
+      var n=new URLSearchParams(location.search).get('next'); if(n&&/^[a-z-]+\.html$/.test(n)&&allowed().indexOf(n.replace('.html',''))>=0){location.href='books/'+n;return} render()}
     else document.getElementById('err').textContent=lang==='fr'?'Code incorrect. Vérifiez le PDF de votre commande.':'That code doesn’t match. Check the PDF in your order.';
   })});
+document.getElementById('more').addEventListener('click',function(){document.getElementById('gate').hidden=false;document.getElementById('code').value='';document.getElementById('code').focus()});
 [].forEach.call(document.querySelectorAll('.seg button'),function(b){b.addEventListener('click',function(){lang=b.dataset.l;try{localStorage.setItem('lang',lang)}catch(e){}render()})});
 try{lang=localStorage.getItem('lang')||((navigator.language||'').toLowerCase().indexOf('fr')===0?'fr':'en')}catch(e){}
 var p=new URLSearchParams(location.search).get('lang'); if(p==='fr'||p==='en')lang=p;
