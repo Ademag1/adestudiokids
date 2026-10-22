@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Read on screen · AdeStudio Kids</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="../favicon.png"><link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#1D2747"><meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1D2747;--ink2:#4A5372;--mist:#F3F5F0;--paper:#fff;--sage:#5F8F72;--gold:#E3A33A;--rose:#D46A78;--line:#DDE3DA}
+*{box-sizing:border-box}body{margin:0;background:var(--mist);color:var(--ink);font:400 17px/1.55 Figtree,system-ui,sans-serif}
+h1,h2{font-family:"Young Serif",Georgia,serif;font-weight:400;margin:0;line-height:1.15}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.top{background:var(--ink);color:#fff;padding:22px 20px 26px;text-align:center}
+.top img{width:56px;height:56px;border-radius:50%;vertical-align:middle}
+.top h1{font-size:clamp(26px,5vw,38px);margin-top:10px}
+.top p{margin:6px 0 0;color:#C9D0E4}
+.seg{display:inline-flex;border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:3px;margin-top:14px}
+.seg button{border:0;background:none;color:#fff;font:600 14px Figtree,sans-serif;padding:7px 14px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true]{background:#fff;color:var(--ink)}
+main{max-width:1000px;margin:0 auto;padding:28px 18px 60px}
+.gate{max-width:440px;margin:30px auto;background:var(--paper);border-radius:18px;padding:28px;box-shadow:0 20px 40px -26px rgba(29,39,71,.5);text-align:center}
+.gate h2{font-size:26px;margin-bottom:8px}.gate p{color:var(--ink2);margin:0 0 18px}
+.gate input{width:100%;font:600 22px Figtree,sans-serif;text-align:center;letter-spacing:.08em;text-transform:uppercase;padding:14px;border:2px solid var(--line);border-radius:12px}
+.gate input:focus{border-color:var(--ink);outline:none}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 17px Figtree,sans-serif;padding:14px 28px;border-radius:999px;background:var(--gold);color:var(--ink);margin-top:16px;width:100%}
+.err{color:#B3363F;font-weight:600;min-height:1.5em;margin-top:10px}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:26px 20px}
+.grid a{text-decoration:none;color:inherit;display:block}
+.grid img{width:100%;aspect-ratio:360/511;object-fit:contain;background:#FAF3E4;border-radius:10px;box-shadow:0 18px 30px -20px rgba(29,39,71,.6);display:block}
+.grid b{display:block;font:400 18px "Young Serif",serif;margin-top:10px;line-height:1.2}
+.grid span{color:var(--ink2);font-size:14px}
+.tip{margin-top:40px;background:var(--paper);border-radius:16px;padding:18px 20px;color:var(--ink2);font-size:15px}
+.tip strong{color:var(--ink)}
+[hidden]{display:none!important}
+</style></head><body>
+<header class="top"><img src="../logo-256.png" alt="AdeStudio Kids"><h1 data-en="Your books on screen" data-fr="Vos livres à l’écran">Your books on screen</h1>
+<p data-en="Tap a book to read it. The pages turn like a real book." data-fr="Touchez un livre pour le lire. Les pages se tournent comme un vrai livre.">Tap a book to read it. The pages turn like a real book.</p>
+<div class="seg" role="group" aria-label="Language"><button type="button" data-l="en" aria-pressed="true">English</button><button type="button" data-l="fr" aria-pressed="false">Français</button></div></header>
+<main>
+<form class="gate" id="gate" hidden>
+<h2 data-en="Enter your access code" data-fr="Entrez votre code d’accès">Enter your access code</h2>
+<p data-en="You’ll find it in the “Read on screen” PDF of your order. You only need to type it once on each device." data-fr="Il se trouve dans le PDF « Lire à l’écran » de votre commande. Une seule fois par appareil.">You’ll find it in the “Read on screen” PDF of your order. You only need to type it once on each device.</p>
+<label for="code" hidden>Code</label><input id="code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="XXXXX-XXXX">
+<button class="btn" type="submit" data-en="Open my books" data-fr="Ouvrir mes livres">Open my books</button>
+<div class="err" id="err" role="alert"></div></form>
+<section id="lib" hidden>
+<ul class="grid" id="grid"></ul>
+<div class="tip" data-en="&lt;strong&gt;Tip:&lt;/strong&gt; add this page to your home screen to open it like an app. iPhone/iPad: Share → Add to Home Screen. Android: menu ⋮ → Add to Home screen." data-fr="&lt;strong&gt;Astuce :&lt;/strong&gt; ajoutez cette page à l’écran d’accueil pour l’ouvrir comme une appli. iPhone/iPad : Partager → Sur l’écran d’accueil. Android : menu ⋮ → Ajouter à l’écran d’accueil."><strong>Tip:</strong> add this page to your home screen to open it like an app. iPhone/iPad: Share → Add to Home Screen. Android: menu ⋮ → Add to Home screen.</div>
+</section></main>
+<script>
+(function(){
+var B=[{"slug": "little-things", "lang": "en", "title": "Little Things, Big Hearts", "age": "4–8", "kind": "book"}, {"slug": "petits-gestes", "lang": "fr", "title": "Petits gestes, grands cœurs", "age": "4–8", "kind": "book"}, {"slug": "winter", "lang": "en", "title": "Winter in Willow Hollow", "age": "4–7", "kind": "book"}, {"slug": "hiver", "lang": "fr", "title": "L’hiver au Val-des-Saules", "age": "4–7", "kind": "book"}, {"slug": "mila", "lang": "en", "title": "Mila’s Big Delivery", "age": "4–7", "kind": "book"}, {"slug": "mila-fr", "lang": "fr", "title": "La grande tournée de Mila", "age": "4–7", "kind": "book"}, {"slug": "winter-puzzle", "lang": "en", "title": "Winter jigsaw puzzle", "age": "4–7", "kind": "puzzle"}, {"slug": "winter-puzzle", "lang": "fr", "title": "Puzzle d’hiver", "age": "4–7", "kind": "puzzle"}], H='e09489c4bc58746307757d77a75bb04441700364b491f27cba2a94116910f121', K='e09489c4bc587463', lang='en';
+function ok(){try{return localStorage.getItem('ask-read')===K}catch(e){return false}}
+function render(){
+  document.documentElement.lang=lang;
+  [].forEach.call(document.querySelectorAll('[data-en]'),function(e){e.innerHTML=e.getAttribute('data-'+lang)});
+  [].forEach.call(document.querySelectorAll('.seg button'),function(b){b.setAttribute('aria-pressed',b.dataset.l===lang)});
+  var g=document.getElementById('grid'); g.innerHTML='';
+  B.filter(function(b){return b.lang===lang}).forEach(function(b){
+    var li=document.createElement('li');
+    li.innerHTML='<a href="books/'+b.slug+'/"><img src="covers/'+b.slug+'.jpg" alt="" loading="lazy"><b>'+b.title+'</b><span>'+(b.kind==='puzzle'?(lang==='fr'?'12 à 96 pièces':'12 to 96 pieces'):(lang==='fr'?b.age+' ans':'Ages '+b.age))+'</span></a>';
+    g.appendChild(li)});
+  document.getElementById('gate').hidden=ok(); document.getElementById('lib').hidden=!ok();
+}
+function hex(buf){return Array.prototype.map.call(new Uint8Array(buf),function(x){return ('0'+x.toString(16)).slice(-2)}).join('')}
+document.getElementById('gate').addEventListener('submit',function(e){
+  e.preventDefault(); var v=document.getElementById('code').value.trim().toUpperCase().replace(/\s+/g,'');
+  crypto.subtle.digest('SHA-256',new TextEncoder().encode(v)).then(function(d){
+    if(hex(d)===H){try{localStorage.setItem('ask-read',K)}catch(x){}
+      var n=new URLSearchParams(location.search).get('next'); if(n&&/^[a-z-]+$/.test(n)){location.href='books/'+n+'/';return} render()}
+    else document.getElementById('err').textContent=lang==='fr'?'Code incorrect. Vérifiez le PDF de votre commande.':'That code doesn’t match. Check the PDF in your order.';
+  })});
+[].forEach.call(document.querySelectorAll('.seg button'),function(b){b.addEventListener('click',function(){lang=b.dataset.l;try{localStorage.setItem('lang',lang)}catch(e){}render()})});
+try{lang=localStorage.getItem('lang')||((navigator.language||'').toLowerCase().indexOf('fr')===0?'fr':'en')}catch(e){}
+var p=new URLSearchParams(location.search).get('lang'); if(p==='fr'||p==='en')lang=p;
+render();
+})();
+</script></body></html>
