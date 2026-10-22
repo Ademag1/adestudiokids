@@ -116,7 +116,7 @@ footer a{text-decoration:none} footer a:hover{color:#fff;text-decoration:underli
 .stage .cover{width:46%;right:0;top:auto;bottom:120px;transform:rotate(4deg);border:6px solid #fff}
 .newnote{left:0;right:auto;bottom:0}
 /* moments */
-.moments{padding:84px 0 0}
+.moments{padding:84px 0 40px}
 .moments h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:10px}
 .moments .sub{color:var(--ink2);margin:0 0 34px;max-width:56ch}
 .mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;list-style:none;margin:0;padding:0}
@@ -134,6 +134,21 @@ footer a{text-decoration:none} footer a:hover{color:#fff;text-decoration:underli
  .newnote{position:relative;margin:-24px auto 0;right:auto}
  .pair{grid-template-columns:1fr}.pair img{height:auto}.pair .wide{aspect-ratio:4/3}.pair .sq{aspect-ratio:1}}
 @media(max-width:520px){.mgrid{gap:14px}.mgrid div{padding:12px 12px 14px}.mgrid h3{font-size:16px}.mgrid p{font-size:13.5px}}
+
+/* hero v2 */
+.hero .wrap{grid-template-columns:1fr 1.3fr 1fr!important;gap:36px!important;padding-top:64px!important;padding-bottom:72px!important}
+.htext{text-align:center}.htext h1{margin:0 auto}.htext .lead{margin-left:auto!important;margin-right:auto!important}.htext .cta{justify-content:center}
+.hp{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:22px;border:6px solid rgba(255,255,255,.95);box-shadow:0 40px 70px -30px rgba(0,0,0,.65);position:relative;z-index:1}
+.hp-l{transform:rotate(-3deg)}.hp-r{transform:rotate(3deg)}
+.mgrid{grid-template-columns:repeat(3,1fr)}
+.parents{padding:84px 0 0}
+.parents h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:10px}
+.parents .sub{color:var(--ink2);margin:0 0 30px;max-width:56ch}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.duo img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:24px;box-shadow:0 30px 50px -34px rgba(29,39,71,.6)}
+@media(max-width:980px){.hero .wrap{grid-template-columns:1fr 1fr!important}.htext{grid-column:1/-1;order:-1}.hp{max-width:340px;justify-self:center}}
+@media(max-width:720px){.duo{grid-template-columns:1fr;gap:16px}.mgrid{grid-template-columns:1fr 1fr}.mgrid li:last-child{grid-column:1/-1}.mgrid li:last-child img{aspect-ratio:16/10}}
+@media(max-width:520px){.hero .wrap{gap:18px!important}.hp{border-width:4px;border-radius:16px}}
 </style></head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="#top"><img src="logo-256.png" alt="" width="42" height="42"><b>AdeStudio Kids</b></a>
@@ -143,27 +158,23 @@ footer a{text-decoration:none} footer a:hover{color:#fff;text-decoration:underli
 
 <main id="top">
 <section class="hero"><div class="wrap">
-<div>
+<img class="hp hp-l" src="photo-hero.jpg" alt="A smiling boy colouring a dinosaur page on the rug" width="900" height="900">
+<div class="htext">
 <h1 data-fr="Des histoires et des activités à imprimer">Stories and activities to print at home</h1>
 <p class="lead" data-fr="Livres d’histoires, cahiers d’activités et coloriages pour les 4 à 10 ans, en français et en anglais. Téléchargez, imprimez ou remplissez à l’écran.">Storybooks, activity books and colouring books for children aged 4 to 10, in English and French. Download, then print or fill in on screen.</p>
 <div class="cta"><a class="btn" href="#books" data-fr="Voir les livres">Browse the books</a><a class="btn ghost" href="#free" data-fr="Pages gratuites">Get free pages</a></div>
 </div>
-<div class="stage">
-<img class="photo" src="photo-hero.jpg" alt="A smiling boy colouring a dinosaur page on the rug" width="900" height="900"><img id="hpage" src="hero-page-en.jpg" alt="" hidden>
-<img class="cover" id="hcover" src="hero-cover-en.jpg" alt="Little Things, Big Hearts storybook cover" width="900" height="900">
-<p class="newnote"><span data-fr="Nouveau">New</span> <strong id="htitle">Little Things, Big Hearts</strong><span style="color:inherit;font-weight:400" data-fr="Six histoires de gentillesse, 15 pages d’activités et un livre feuilletable.">Six kindness stories, 15 activity pages and a flipbook.</span></p>
-</div>
+<img class="hp hp-r" src="photo-screen.jpg" alt="A boy colouring a dinosaur on his tablet" width="900" height="900">
+<div hidden><img id="hpage" alt=""><img id="hcover" alt=""><span id="htitle"></span></div>
 </div><svg class="leaf" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 36C20 22 26 10 36 4C36 18 30 30 20 36Z" fill="currentColor"/><path d="M20 36C20 26 14 16 4 12C6 24 12 32 20 36Z" fill="currentColor" opacity=".55"/></svg></section>
 
-<section class="moments" id="moments"><div class="wrap">
-<h2 data-fr="De petits moments, chaque jour">Little moments, every day</h2>
-<p class="sub" data-fr="Lire ensemble, colorier sur papier ou sur tablette, et être fier de son travail.">Reading together, colouring on paper or on a tablet, and feeling proud of what they made.</p>
-<ul class="mgrid">
-<li><img src="photo-read.jpg" alt="A father reading a picture book with his daughter" loading="lazy" width="900" height="900"><div style="--c:var(--gold)"><h3 data-fr="Lire ensemble">Read together</h3><p data-fr="Des histoires douces à partager le soir.">Gentle stories to share at bedtime.</p></div></li>
-<li><img src="photo-paper.jpg" alt="A child colouring a farm animal page with crayons" loading="lazy" width="900" height="900"><div style="--c:var(--rose)"><h3 data-fr="Colorier sur papier">Colour on paper</h3><p data-fr="Imprimez vos pages préférées encore et encore.">Print favourite pages again and again.</p></div></li>
-<li><img src="photo-screen.jpg" alt="A boy colouring a dinosaur on a tablet" loading="lazy" width="900" height="900"><div style="--c:var(--sage)"><h3 data-fr="Colorier à l’écran">Colour on screen</h3><p data-fr="Sur tablette, téléphone ou ordinateur.">On a tablet, phone or computer.</p></div></li>
-<li><img src="photo-proud.jpg" alt="A proud boy holding his finished colouring page and certificate" loading="lazy" width="900" height="900"><div style="--c:var(--ink)"><h3 data-fr="Être fier">Feel proud</h3><p data-fr="Un diplôme à son prénom à la fin.">A certificate with their name at the end.</p></div></li>
-</ul></div></section>
+<section class="parents"><div class="wrap">
+<h2 data-fr="Lire ensemble, le plus beau moment de la journée">Reading together, the best part of the day</h2>
+<p class="sub" data-fr="Nos histoires sont faites pour être lues à deux, le soir ou le week-end.">Our stories are made to be read together, at bedtime or at the weekend.</p>
+<div class="duo">
+<img src="photo-read.jpg" alt="A father reading a picture book with his daughter" loading="lazy" width="900" height="900">
+<img src="photo-mum.jpg" alt="A mother reading a picture book with her daughter" loading="lazy" width="900" height="900">
+</div></div></section>
 
 <section class="gift" id="free"><div class="wrap">
 <img src="free-winter-pages.jpg" alt="Four free winter activity pages with Mila the bird" loading="lazy">
@@ -339,13 +350,20 @@ footer a{text-decoration:none} footer a:hover{color:#fff;text-decoration:underli
 </div></section>
 
 <section class="promise" id="about"><div class="wrap">
-<div class="pair"><img class="wide" src="photo-together.jpg" alt="Three children doing printable activity pages together" loading="lazy" width="1400" height="783"><img class="sq" src="photo-mum.jpg" alt="A mother reading a picture book with her daughter" loading="lazy" width="900" height="900"></div>
 <h2 data-fr="Des livres faits avec soin, pour lire et créer ensemble">Books made with care, for reading and making things together</h2>
 <div class="three">
 <div style="--c:var(--gold)"><h3 data-fr="Nos propres personnages">Our own characters</h3><p data-fr="Mila, Leo, Pepper et leurs amis sont dessinés pour nos livres. Vous ne les trouverez nulle part ailleurs.">Mila, Leo, Pepper and their friends are made for our books. You won’t find them anywhere else.</p></div>
 <div style="--c:var(--sage)"><h3 data-fr="Deux langues">Two languages</h3><p data-fr="La plupart des livres existent en français et en anglais, pour les familles bilingues et les petits qui apprennent.">Most books come in English and in French, for bilingual families and young language learners.</p></div>
 <div style="--c:var(--rose)"><h3 data-fr="À remplir ou à imprimer">Fill in or print</h3><p data-fr="Des PDF à remplir sur tablette ou ordinateur, ou à imprimer en A4 et US Letter.">Fillable PDFs to type in on a tablet or computer, or print in A4 and US Letter.</p></div>
 </div></div></section>
+<section class="moments" id="moments"><div class="wrap">
+<h2 data-fr="De petits moments, chaque jour">Little moments, every day</h2>
+<p class="sub" data-fr="Colorier, être fier de son travail et apprendre en s’amusant.">Colouring, feeling proud of what they made, and learning while having fun.</p>
+<ul class="mgrid">
+<li><img src="photo-paper.jpg" alt="A child colouring a farm animal page with crayons" loading="lazy" width="900" height="900"><div style="--c:var(--rose)"><h3 data-fr="Colorier sur papier">Colour on paper</h3><p data-fr="Imprimez vos pages préférées encore et encore.">Print favourite pages again and again.</p></div></li>
+<li><img src="photo-proud.jpg" alt="A proud boy holding his finished colouring page and certificate" loading="lazy" width="900" height="900"><div style="--c:var(--sage)"><h3 data-fr="Être fier">Feel proud</h3><p data-fr="Un diplôme à son prénom à la fin.">A certificate with their name at the end.</p></div></li>
+<li><img src="photo-together-sq.jpg" alt="Three children doing printable activity pages together" loading="lazy" width="900" height="900"><div style="--c:var(--gold)"><h3 data-fr="Apprendre ensemble">Learn together</h3><p data-fr="Tracés, labyrinthes et jeux, seul ou entre amis.">Tracing, mazes and puzzles, alone or with friends.</p></div></li>
+</ul></div></section>
 </main>
 
 <footer><div class="wrap">
