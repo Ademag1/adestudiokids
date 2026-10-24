@@ -30,6 +30,8 @@ main{max-width:1000px;margin:0 auto;padding:28px 18px 60px}
 .grid img{width:100%;aspect-ratio:360/511;object-fit:cover;border-radius:10px;box-shadow:0 18px 30px -20px rgba(29,39,71,.6);display:block}
 .grid b{display:block;font:400 18px "Young Serif",serif;margin-top:10px;line-height:1.2}
 .grid span{color:var(--ink2);font-size:14px}
+.grid a{position:relative}.grid i{position:absolute;top:8px;left:8px;font:700 12px Figtree,sans-serif;font-style:normal;background:rgba(255,255,255,.92);color:#1D2747;border-radius:999px;padding:4px 9px;box-shadow:0 2px 6px rgba(0,0,0,.15)}.grid i.ok{background:#1f9d55;color:#fff}
+.offst{text-align:center;color:var(--ink2);font-size:15px;margin:0 0 22px;min-height:1.2em}
 .tip{margin-top:40px;background:var(--paper);border-radius:16px;padding:18px 20px;color:var(--ink2);font-size:15px}
 .tip strong{color:var(--ink)}
 [hidden]{display:none!important}
@@ -45,6 +47,7 @@ main{max-width:1000px;margin:0 auto;padding:28px 18px 60px}
 <button class="btn" type="submit" data-en="Open my colouring books" data-fr="Ouvrir mes livres de coloriage">Open my colouring books</button>
 <div class="err" id="err" role="alert"></div></form>
 <section id="lib" hidden>
+<p class="offst" id="offst" aria-live="polite"></p>
 <ul class="grid" id="grid"></ul>
 <p style="text-align:center;margin:30px 0 0"><button type="button" id="more" style="border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;font:600 15px Figtree,sans-serif;cursor:pointer" data-en="I have another code" data-fr="J’ai un autre code">I have another code</button></p><div class="tip" data-en="&lt;strong&gt;Tip:&lt;/strong&gt; add this page to your home screen to open it like an app. iPhone/iPad: Share → Add to Home Screen. Android: menu ⋮ → Add to Home screen." data-fr="&lt;strong&gt;Astuce :&lt;/strong&gt; ajoutez cette page à l’écran d’accueil pour l’ouvrir comme une appli. iPhone/iPad : Partager → Sur l’écran d’accueil. Android : menu ⋮ → Ajouter à l’écran d’accueil."><strong>Tip:</strong> add this page to your home screen to open it like an app. iPhone/iPad: Share → Add to Home Screen. Android: menu ⋮ → Add to Home screen.</div>
 </section></main>
@@ -61,9 +64,36 @@ function render(){
   var shown=mine.filter(function(b){return b.lang===lang}); if(!shown.length)shown=mine;
   shown.forEach(function(b){
     var li=document.createElement('li');
-    li.innerHTML='<a href="books/'+b.slug+'.html"><img src="covers/'+b.slug+'.jpg" alt="" loading="lazy"><b>'+b.title+'</b><span>'+(b.lang==='fr'?b.age+' ans':'Ages '+b.age)+'</span></a>';
+    li.innerHTML='<a href="books/'+b.slug+'.html"><img src="covers/'+b.slug+'.jpg" alt="" loading="lazy">'+(OFF[b.slug]?'<i class="ok">✓ '+(lang==='fr'?'Hors ligne':'Offline')+'</i>':'')+'<b>'+b.title+'</b><span>'+(b.lang==='fr'?b.age+' ans':'Ages '+b.age)+'</span></a>';
     g.appendChild(li)});
   document.getElementById('gate').hidden=mine.length>0; document.getElementById('lib').hidden=!mine.length;
+  status(); save(al);
+}
+var OFF={}, SAVING=0, TOTAL=0, SENT='';
+function status(){var el=document.getElementById('offst'); if(!el)return; var al=allowed(), n=al.filter(function(s){return OFF[s]}).length;
+  if(!('serviceWorker' in navigator)){el.textContent='';return}
+  if(SAVING&&n<al.length)el.textContent=lang==='fr'?'Enregistrement pour une utilisation sans internet… '+n+'/'+al.length:'Saving your books to use without internet… '+n+'/'+al.length;
+  else if(al.length&&n===al.length)el.textContent=lang==='fr'?'✓ Vos livres fonctionnent sans internet sur cet appareil.':'✓ Your books work without internet on this device.';
+  else if(!navigator.onLine)el.textContent=lang==='fr'?'Connectez-vous à internet une fois pour enregistrer vos livres.':'Connect to the internet once to save your books for offline use.';
+  else el.textContent=''}
+function save(al){
+  if(!('serviceWorker' in navigator)||!al.length)return;
+  navigator.serviceWorker.ready.then(function(reg){
+    var key=al.slice().sort().join(','), last=0; try{last=+localStorage.getItem('ask-off-refresh')||0}catch(e){}
+    var refresh=navigator.onLine&&Date.now()-last>7*864e5;
+    if(key===SENT&&!refresh)return; SENT=key; SAVING=1; status();
+    if(refresh)try{localStorage.setItem('ask-off-refresh',String(Date.now()))}catch(e){}
+    if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(function(){});
+    (reg.active||navigator.serviceWorker.controller).postMessage({type:'save',books:al,refresh:refresh});
+  });
+}
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.addEventListener('message',function(e){var d=e.data||{}; if(d.type!=='saved')return;
+    if(d.ok)OFF[d.slug]=1; if(d.done>=d.total)SAVING=0; var a=document.querySelector('a[href="books/'+d.slug+'.html"]');
+    if(a&&d.ok&&!a.querySelector('i')){var i=document.createElement('i');i.className='ok';i.textContent='✓ '+(lang==='fr'?'Hors ligne':'Offline');a.appendChild(i)} status()});
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+  if(window.caches)caches.open('ask-colour-v1').then(function(c){return c.keys()}).then(function(ks){ks.forEach(function(r){var m=r.url.match(/books\/([a-z-]+)\.html$/);if(m)OFF[m[1]]=1});render()}).catch(function(){});
+  addEventListener('online',status);addEventListener('offline',status);
 }
 function hex(buf){return Array.prototype.map.call(new Uint8Array(buf),function(x){return ('0'+x.toString(16)).slice(-2)}).join('')}
 document.getElementById('gate').addEventListener('submit',function(e){
