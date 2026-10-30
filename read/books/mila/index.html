@@ -80,24 +80,24 @@ select {
   <button class="btn primary" id="next" aria-label="Next page" type="button">Next &rarr;</button>
   <select id="jump" aria-label="Jump to a section">
     <option value="1">Cover</option>
-    <option value="2">Hello, helper!</option>
-    <option value="3">The story begins</option>
-    <option value="14">The missing letters</option>
-    <option value="16">Into the forest</option>
-    <option value="21">The last letter</option>
-    <option value="23">Write back to Mila</option>
-    <option value="25">Colouring pages</option>
-    <option value="31">Post Helper certificate</option>
-    <option value="32">Back cover</option>
+    <option value="3">Contents</option>
+    <option value="5">Meet the friends</option>
+    <option value="7">Story 1 · Mila’s Big Delivery</option>
+    <option value="34">Story 2 · Thank You, Bunny!</option>
+    <option value="49">Story 3 · The First Snow</option>
+    <option value="64">Activity time</option>
+    <option value="95">Colouring pages</option>
+    <option value="113">Post Helper certificate</option>
+    <option value="114">Back cover</option>
   </select>
 </div>
 <p class="note">Swipe or drag the page corners to turn. Fill in the activities on the PDF.</p>
 
 <script>
 (function () {
-  var TOTAL = 32;
+  var TOTAL = 114;
   var urls = [];
-  for (var i = 1; i <= TOTAL; i++) urls.push("pages/p" + (i < 10 ? "0" : "") + i + ".jpg");
+  for (var i = 1; i <= TOTAL; i++) urls.push("pages/p" + ("00" + i).slice(-3) + ".jpg");
   var stage = document.getElementById("stage");
   var book = document.getElementById("book");
   var where = document.getElementById("where");

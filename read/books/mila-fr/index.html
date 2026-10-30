@@ -80,24 +80,24 @@ select {
   <button class="btn primary" id="next" aria-label="Page suivante" type="button">Suivant &rarr;</button>
   <select id="jump" aria-label="Aller à une section">
     <option value="1">Couverture</option>
-    <option value="2">Bonjour, petit aide !</option>
-    <option value="3">L’histoire commence</option>
-    <option value="14">Les lettres perdues</option>
-    <option value="16">Dans la forêt</option>
-    <option value="21">La dernière lettre</option>
-    <option value="23">Réponds à Mila</option>
-    <option value="25">Coloriages</option>
-    <option value="31">Diplôme d’aide-facteur</option>
-    <option value="32">4e de couverture</option>
+    <option value="3">Sommaire</option>
+    <option value="5">Les amis</option>
+    <option value="7">Histoire 1 · La grande tournée de Mila</option>
+    <option value="34">Histoire 2 · Merci, Lapinou !</option>
+    <option value="49">Histoire 3 · La première neige</option>
+    <option value="64">Place aux activités</option>
+    <option value="95">Coloriages</option>
+    <option value="113">Diplôme d’aide-facteur</option>
+    <option value="114">4e de couverture</option>
   </select>
 </div>
 <p class="note">Glisse ou tire le coin des pages pour tourner. Remplis les activités dans le PDF.</p>
 
 <script>
 (function () {
-  var TOTAL = 32;
+  var TOTAL = 114;
   var urls = [];
-  for (var i = 1; i <= TOTAL; i++) urls.push("pages/p" + (i < 10 ? "0" : "") + i + ".jpg");
+  for (var i = 1; i <= TOTAL; i++) urls.push("pages/p" + ("00" + i).slice(-3) + ".jpg");
   var stage = document.getElementById("stage");
   var book = document.getElementById("book");
   var where = document.getElementById("where");
