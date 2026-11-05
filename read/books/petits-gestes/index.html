@@ -81,25 +81,27 @@ select {
   <select id="jump" aria-label="Aller à une section">
     <option value="1">Couverture</option>
     <option value="5">Les amis du jardin</option>
-    <option value="7">1 · Le petit oiseau qui avait besoin d’aide</option>
-    <option value="15">2 · L'ami que personne n'avait remarqué</option>
-    <option value="23">3 · Le pot de fleurs cassé</option>
-    <option value="31">4 · Le jouet que deux amis voulaient</option>
-    <option value="39">5 · Le pont qui semblait impossible</option>
-    <option value="47">6 · Un jardin pour tous</option>
-    <option value="53">Pages d'activités</option>
-    <option value="68">Fin</option>
-    <option value="69">Certificat</option>
-    <option value="70">4e de couverture</option>
+    <option value="6">La carte du jardin</option>
+    <option value="8">1 · Le petit oiseau qui avait besoin d’aide</option>
+    <option value="16">2 · L’ami que personne n’avait remarqué</option>
+    <option value="24">3 · Le pot de fleurs cassé</option>
+    <option value="32">4 · Le jouet que deux amis voulaient</option>
+    <option value="40">5 · Le pont qui semblait impossible</option>
+    <option value="48">6 · Un jardin pour tous</option>
+    <option value="54">Pages d’activités</option>
+    <option value="62">Cherche la gentillesse</option>
+    <option value="69">Fin</option>
+    <option value="70">Certificat</option>
+    <option value="72">4e de couverture</option>
   </select>
 </div>
 <p class="note">Fais glisser ou tire un coin de page pour tourner. Les pages d'activités se remplissent dans le PDF.</p>
 
 <script>
 (function () {
-  var TOTAL = 70;
+  var TOTAL = 72;
   var urls = [];
-  for (var i = 1; i <= TOTAL; i++) urls.push("pages/p" + (i < 10 ? "0" : "") + i + ".jpg");
+  for (var i = 1; i <= TOTAL; i++) urls.push("pages/p" + ("00" + i).slice(-3) + ".jpg");
   var stage = document.getElementById("stage");
   var book = document.getElementById("book");
   var where = document.getElementById("where");

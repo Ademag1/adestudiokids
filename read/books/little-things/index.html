@@ -81,25 +81,27 @@ select {
   <select id="jump" aria-label="Jump to a section">
     <option value="1">Cover</option>
     <option value="5">Meet the friends</option>
-    <option value="7">1 · The Little Bird Who Needed Help</option>
-    <option value="15">2 · The Friend Nobody Noticed</option>
-    <option value="23">3 · The Broken Flowerpot</option>
-    <option value="31">4 · The Toy That Two Friends Wanted</option>
-    <option value="39">5 · The Bridge That Seemed Impossible</option>
-    <option value="47">6 · A Garden for Everyone</option>
-    <option value="53">Activity pages</option>
-    <option value="68">The end</option>
-    <option value="69">Certificate</option>
-    <option value="70">Back cover</option>
+    <option value="6">The garden map</option>
+    <option value="8">1 · The Little Bird Who Needed Help</option>
+    <option value="16">2 · The Friend Nobody Noticed</option>
+    <option value="24">3 · The Broken Flowerpot</option>
+    <option value="32">4 · The Toy That Two Friends Wanted</option>
+    <option value="40">5 · The Bridge That Seemed Impossible</option>
+    <option value="48">6 · A Garden for Everyone</option>
+    <option value="54">Activity pages</option>
+    <option value="62">Find the kindness</option>
+    <option value="69">The end</option>
+    <option value="70">Certificate</option>
+    <option value="72">Back cover</option>
   </select>
 </div>
 <p class="note">Swipe or drag the page corners to turn. The activity pages can be filled in on the PDF.</p>
 
 <script>
 (function () {
-  var TOTAL = 70;
+  var TOTAL = 72;
   var urls = [];
-  for (var i = 1; i <= TOTAL; i++) urls.push("pages/p" + (i < 10 ? "0" : "") + i + ".jpg");
+  for (var i = 1; i <= TOTAL; i++) urls.push("pages/p" + ("00" + i).slice(-3) + ".jpg");
   var stage = document.getElementById("stage");
   var book = document.getElementById("book");
   var where = document.getElementById("where");
